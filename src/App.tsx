@@ -4,9 +4,9 @@ import { NewNoteCard } from './components/NewNoteCard';
 import { NoteCard } from './components/NoteCard';
 
 interface Note {
-  id: number
-  date: Date
-  content: string
+  id: string;
+  date: Date;
+  content: string;
 }
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
     localStorage.setItem('notes', JSON.stringify(notesArray))
   }
 
-  const onNoteDeleted = (id: number) => {
+  const onNoteDeleted = (id: string) => {
     const notesArray = notes.filter(note => note.id !== id)
 
     setNotes(notesArray)

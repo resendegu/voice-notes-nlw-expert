@@ -5,12 +5,12 @@ import { X } from 'lucide-react'
 
 interface NoteCardProps {
     note: {
-        id: number
-        date: Date
-        content: string
+        id: string;
+        date: Date;
+        content: string;
     },
 
-    onNoteDeleted: (id: number) => void
+    onNoteDeleted: (id: string) => void
 }
 
 const NoteCard = ({note, onNoteDeleted}: NoteCardProps) => {
